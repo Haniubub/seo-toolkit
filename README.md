@@ -28,6 +28,7 @@ synthesises everything into one weighted, prioritised report.
 - [Architecture](#architecture)
 - [Requirements](#requirements)
 - [Key-gated features](#key-gated-features)
+- [Sources & References](#sources--references)
 - [Attribution & License](#attribution--license)
 
 ---
@@ -162,6 +163,52 @@ seo-toolkit/
 Google APIs (PageSpeed, CrUX, GSC, GA4), DataForSEO, Firecrawl, Ahrefs, Bing and
 Banana are **ported but require their own credentials**. Without them the core
 measurement still works fully.
+
+---
+
+## Sources & References
+
+The audit logic and scoring are grounded in primary-source guidance rather than
+blog-level folklore. The bundled [`pdf/google-seo-reference.md`](pdf/google-seo-reference.md)
+is the canonical, curated source-of-truth shipped with this toolkit, and the
+categories map to the following references.
+
+### Google Search guidance
+
+- [Google Search Essentials](https://developers.google.com/search/docs/essentials) — technical requirements, spam policies, key best practices
+- [How Google Search Works](https://developers.google.com/search/docs/fundamentals/how-search-works)
+- [Creating helpful, reliable, people-first content](https://developers.google.com/search/docs/fundamentals/creating-helpful-content) — E-E-A-T & the Search Quality Rater Guidelines (QRG)
+- [Spam policies](https://developers.google.com/search/docs/essentials/spam-policies)
+- [Google's AI Optimization Guide](https://developers.google.com/search/docs/fundamentals/ai-optimization-guide) — GEO / AI Overviews alignment
+- [Google Search Central Blog](https://developers.google.com/search/blog) — algorithm & feature updates (FAQ rich results, deprecated types, site-reputation abuse)
+
+### Structured data & Schema.org
+
+- [Google Structured Data Overview](https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data)
+- [Rich Results Test](https://search.google.com/test/rich-results)
+- [schema.org](https://schema.org) — active type vocabulary, plus the deprecated-types tracking
+
+### Performance, field & lab data
+
+- [Core Web Vitals](https://web.dev/articles/inp) — INP replaced FID (web.dev)
+- [PageSpeed Insights](https://pagespeed.web.dev/) — lab + field data (CrUX)
+- [Search Console Help](https://support.google.com/webmasters) — indexation & GSC
+
+### Tooling
+
+- Headless rendering via [Playwright](https://playwright.dev/) · HTML/text extraction from
+  [trafilatura](https://github.com/adbar/trafilatura) & [htmldate](https://github.com/adbar/htmldate)
+- PDF reports via [WeasyPrint](https://weasyprint.org/)
+
+### Upstream
+
+- [AgriciDaniel/claude-seo](https://github.com/AgriciDaniel/claude-seo) v2.2.5 — the MIT
+  toolkit this is a native port of (see [Attribution & License](#attribution--license))
+
+> The bundled references and this list stay aligned with Google Search currency
+> through August 2026. Deprecated structured-data types (HowTo,
+> SpecialAnnouncement, ClaimReview, VehicleListing, …) are flagged rather than
+> recommended.
 
 ---
 
