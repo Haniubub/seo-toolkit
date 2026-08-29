@@ -14,7 +14,7 @@ jobs:
       - name: Install dependencies
         run: pip install --quiet requests beautifulsoup4 lxml
       - name: Python syntax check
-        run: python -m py_compile seo.py setup.sh lib/*.py
+        run: python -m py_compile seo.py lib/*.py
       - name: Import smoke test
         run: python -c "import sys; sys.path.insert(0,'.'); import seo; print('seo imports OK')"
       - name: CLI smoke test
