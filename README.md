@@ -43,9 +43,8 @@ the whole reason this port is worth switching to.
 
 | Model (per 1M tokens — in / out) | Input | Output | **Cost per full audit** |
 |---------------------------------|-------|--------|--------------------------|
-| Claude Opus 5 | $5.00 | $25.00 | **≈ $1.13** |
-| Claude Sonnet 5 | $2.00 | $10.00 | **≈ $0.45** |
-| Claude Haiku 4.5 | $1.00 | $5.00 | **≈ $0.23** |
+| Claude Sonnet 5 (cheapest tier) | $2.00 | $10.00 | **≈ $0.45** |
+| Claude Opus 5 (top tier) | $5.00 | $25.00 | **≈ $1.13** |
 | **DeepSeek V3.2** | **$0.27** | **$0.40** | **≈ $0.04** |
 
 **Worked example** — one full `./seo audit` on a local-service site spawns the
@@ -54,15 +53,16 @@ industry-specific ones, then synthesises the weighted report. Measure that as
 **100,000 input tokens and 25,000 output tokens** per audit:
 
 ```
-Claude Opus 5:   (0.10 M × $5)  + (0.025 M × $25)  = $0.50 + $0.625 = $1.13
-Claude Sonnet 5: (0.10 M × $2)  + (0.025 M × $10)  = $0.20 + $0.25  = $0.45
-DeepSeek V3.2:   (0.10 M × $0.27)+ (0.025 M × $0.40) = $0.027 + $0.01 = $0.037
+Claude Sonnet 5: (0.10 M × $2)   + (0.025 M × $10)   = $0.20 + $0.25 = $0.45
+Claude Opus 5:   (0.10 M × $5)   + (0.025 M × $25)   = $0.50 + $0.625 = $1.13
+DeepSeek V3.2:   (0.10 M × $0.27)+ (0.025 M × $0.40)  = $0.027 + $0.01 = $0.037
 ```
 
-So the same audit costs **≈ $0.04 on DeepSeek** against **≈ $0.45 on Claude
-Sonnet** and **≈ $1.13 on Claude Opus** — roughly **12× cheaper** than Sonnet and
-**30× cheaper** than Opus. Run 20 sites a day and Claude Opus would bill you
-**≈ $22.60** for the LLM judgment alone; DeepSeek does the same for **≈ $0.74**.
+So the same audit costs **≈ $0.04 on DeepSeek** against **≈ $0.45–$1.13 on
+Claude** (Sonnet 5 to Opus 5) — roughly **12×–30× cheaper**, depending on the
+Claude tier you would otherwise run. At 20 sites a day Claude would bill you
+**≈ $9.00–$22.60** for the LLM judgment alone; DeepSeek does the same for
+**≈ $0.74**.
 
 The measurement layer never touches the LLM, so a `technical`, `schema` or
 `local` check can be **$0** — only the reasoning steps that need judgement cost
