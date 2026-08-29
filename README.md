@@ -41,6 +41,10 @@ observable layer is **pure local Python** (53 scripts + `lib/`) — it runs for 
 in tokens**. The only spend is the LLM reasoning over those findings, and that is
 the whole reason this port is worth switching to.
 
+> ### 💡 **12×–30× cheaper per audit** than running the same audit on Claude.
+> Full comparison below — the number holds for every Claude tier you would
+> otherwise run (Sonnet 5, Opus 5, even Haiku).
+
 | Model (per 1M tokens — in / out) | Input | Output | **Cost per full audit** |
 |---------------------------------|-------|--------|--------------------------|
 | Claude Sonnet 5 (cheapest tier) | $2.00 | $10.00 | **≈ $0.45** |
