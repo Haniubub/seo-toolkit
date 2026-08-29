@@ -29,6 +29,7 @@ see [Attribution & License](#attribution--license).
 ## Table of Contents
 
 - [What it does](#what-it-does)
+- [Example output](#example-output)
 - [Cost per audit — DeepSeek Harness vs Claude Code](#cost-per-audit--deepseek-harness-vs-claude-code)
 - [Quick start (Gated multi-agent fan-out)](#quick-start)
 - [Architecture](#architecture)
@@ -50,6 +51,37 @@ A full audit is split into two layers:
 
 Every recommendation carries the four claude-seo fields:
 **Observation → Dependency → Failure signal → Early indicator.**
+
+---
+
+## Example output
+
+A sample of the top recommendations an audit produces, with their four fields.
+These are illustrative (anonymised, no real site data) — they show the shape of
+the output, not a specific client's findings.
+
+**① Complete the local structured data** (LocalBusiness / Restaurant)
+- **Observation:** Structured data is missing or incomplete — NAP and opening hours are not exposed as JSON-LD.
+- **Dependency:** first; local signals build on it.
+- **Failure signal:** the Rich Results Test still reports no `LocalBusiness` markup.
+- **Early indicator:** the business panel appears with correct hours and menu.
+
+**② Fix a case-sensitive asset path** (stylesheet 404)
+- **Observation:** a stylesheet is requested with the wrong casing and returns a 404, leaving the page unstyled.
+- **Dependency:** immediately; purely technical, blocks nothing else.
+- **Failure signal:** the page still loads without styles; the 404 persists.
+- **Early indicator:** no 404 in the log; Core Web Vitals improve.
+
+**③ Add crawlable fallback content + robots & sitemap**
+- **Observation:** the page is client-rendered (SPA) — little content is reachable without JS support.
+- **Dependency:** after schema; content must exist for the markup to apply.
+- **Failure signal:** "rendered: no" persists; pages stay unindexed.
+- **Early indicator:** crawlable visibility rises.
+
+These three span different impact axes — local visibility, rendering/performance
+and indexation — which is exactly why they surface near the top of an audit.
+Full audit output is a weighted score across seven categories plus a
+dependency-ordered action plan.
 
 ---
 
