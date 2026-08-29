@@ -110,6 +110,29 @@ measurement still works fully.
 
 ## Attribution & License
 
-Ported from [AgriciDaniel/claude-seo](https://github.com/AgriciDaniel/claude-seo)
-(MIT, © Agrici Daniel). Original `LICENSE`/`LICENSE.txt` files are preserved.
-The orchestrator, `lib/`, and this wrapper are also MIT.
+This project is a **native re-implementation and port** of
+[AgriciDaniel/claude-seo](https://github.com/AgriciDaniel/claude-seo) v2.2.5
+(MIT, © Agrici Daniel). It does **not** vendor the original repository or run
+Claude Code; the upstream toolkit was ported, adapted and rebuilt to run
+standalone as a local CLI + agent library in the DeepSeek Harness environment.
+
+Where the measurement logic is derived from claude-seo, the original MIT
+copyright and permission notice is preserved in [`LICENSE`](LICENSE) and in the
+individual ported script headers.
+
+**This repo's own work** (also MIT, © 2026 seo-audit contributors):
+
+- **Runtime port & integration** — a wrapper/orchestrator that executes the
+  toolkit natively as `./seo`, with dependency pinning and a sandbox-safe,
+  workspace-local runtime (no global installs, no SaaS).
+- **Weighted health scoring** — the 22/23/20/10/10/10/5 category weighting and
+  the `overall_score()` renormalisation.
+- **Gated multi-agent fan-out** — business-type detection + credential gating so
+  only relevant sub-agents spawn, with the reproducible `audit-fanout.workflow.js`.
+- **Toolchain hardening** — Playwright headless-render worker with hard subprocess
+  timeouts, redaction of secrets, `lib/` measurement core, and curated script set.
+- **Packaging, docs & CI** — README, architecture, `./seo doctor`, GitHub Actions
+  CI, `CHANGELOG.txt`/release notes.
+
+Both the upstream-derived and the original code are released under the
+[MIT License](LICENSE).
