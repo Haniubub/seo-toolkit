@@ -7,10 +7,12 @@
 > **Status:** production-ready port of `claude-seo` v2.2.5 · **v1.0.0**
 
 
-A production-grade, **Claude-Code-style SEO orchestrator** (a native port of
-[AgriciDaniel/claude-seo](https://github.com/AgriciDaniel/claude-seo) v2.2.5, MIT)
-that runs entirely in your own environment — **no Claude Code, no plugin marketplace**,
-no third-party SaaS required.
+A production-grade, **local SEO & technical SEO audit toolkit** — a native, self-contained
+port of [AgriciDaniel/claude-seo](https://github.com/AgriciDaniel/claude-seo) v2.2.5 (MIT) that
+runs entirely in your own environment: **no Claude Code, no plugin marketplace, no third-party SaaS**.
+
+Built for **local SEO**, **technical SEO**, **schema.org**, **E-E-A-T**, **GEO / AI Overviews**,
+**Google Business Profile (GBP)**, **on-page & content** audits across any industry.
 
 It combines **deterministic measurement** (own Python specialists + 53 ported
 scripts) with **LLM-driven judgment** (24 sub-skills + 18 agent prompts), and
