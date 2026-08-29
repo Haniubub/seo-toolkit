@@ -1,5 +1,12 @@
 # seo-audit — Local SEO & Technical Audit Toolkit
 
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
+![Python](https://img.shields.io/badge/python-3.10%2B-blue)
+[![CI](https://github.com/Haniubub/seo-toolkit/actions/workflows/ci.yml/badge.svg)](https://github.com/Haniubub/seo-toolkit/actions)
+
+> **Status:** production-ready port of `claude-seo` v2.2.5 · **v1.0.0**
+
+
 A production-grade, **Claude-Code-style SEO orchestrator** (a native port of
 [AgriciDaniel/claude-seo](https://github.com/AgriciDaniel/claude-seo) v2.2.5, MIT)
 that runs entirely in your own environment — **no Claude Code, no plugin marketplace**,

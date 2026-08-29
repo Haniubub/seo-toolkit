@@ -1,0 +1,21 @@
+name: CI
+on:
+  push:
+    branches: [main]
+  pull_request:
+jobs:
+  lint-and-smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install dependencies
+        run: pip install --quiet requests beautifulsoup4 lxml
+      - name: Python syntax check
+        run: python -m py_compile seo.py setup.sh lib/*.py
+      - name: Import smoke test
+        run: python -c "import sys; sys.path.insert(0,'.'); import seo; print('seo imports OK')"
+      - name: CLI smoke test
+        run: python seo.py content-brief "Test brief" | grep -q "Content-Brief" && echo "CLI OK"
