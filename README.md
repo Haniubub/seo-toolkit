@@ -20,6 +20,19 @@ synthesises everything into one weighted, prioritised report.
 
 ---
 
+## Table of Contents
+
+- [What it does](#what-it-does)
+- [Cost per audit — DeepSeek Harness vs Claude Code](#cost-per-audit--deepseek-harness-vs-claude-code)
+- [Quick start](#quick-start)
+  - [Gated multi-agent fan-out](#gated-multi-agent-fan-out)
+- [Architecture](#architecture)
+- [Requirements](#requirements)
+- [Key-gated features](#key-gated-features)
+- [Attribution & License](#attribution--license)
+
+---
+
 ## What it does
 
 A full audit is split into two layers:
