@@ -24,8 +24,7 @@ synthesises everything into one weighted, prioritised report.
 
 - [What it does](#what-it-does)
 - [Cost per audit — DeepSeek Harness vs Claude Code](#cost-per-audit--deepseek-harness-vs-claude-code)
-- [Quick start](#quick-start)
-  - [Gated multi-agent fan-out](#gated-multi-agent-fan-out)
+- [Quick start (Gated multi-agent fan-out)](#quick-start)
 - [Architecture](#architecture)
 - [Requirements](#requirements)
 - [Key-gated features](#key-gated-features)
