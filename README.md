@@ -4,19 +4,25 @@
 ![Python](https://img.shields.io/badge/python-3.10%2B-blue)
 [![CI](https://github.com/Haniubub/seo-toolkit/actions/workflows/ci.yml/badge.svg)](https://github.com/Haniubub/seo-toolkit/actions)
 
-> **Status:** production-ready port of `claude-seo` v2.2.5 · **v1.0.0**
+> **Status:** production-ready · **v1.0.0**
 
 
-A production-grade, **local SEO & technical SEO audit toolkit** — a native, self-contained
-port of [AgriciDaniel/claude-seo](https://github.com/AgriciDaniel/claude-seo) v2.2.5 (MIT) that
-runs entirely in your own environment: **no Claude Code, no plugin marketplace, no third-party SaaS**.
+A production-grade SEO audit toolkit that runs a full, weighted technical, content,
+schema and local audit on any website — **self-contained and strictly local**: no Claude
+Code, no plugin marketplace, no third-party SaaS, no per-domain pricing. It executes as a
+plain CLI + agent library in the DeepSeek Harness environment and works out of the box.
 
 Built for **local SEO**, **technical SEO**, **schema.org**, **E-E-A-T**, **GEO / AI Overviews**,
 **Google Business Profile (GBP)**, **on-page & content** audits across any industry.
 
-It combines **deterministic measurement** (own Python specialists + 53 ported
-scripts) with **LLM-driven judgment** (24 sub-skills + 18 agent prompts), and
+It combines **deterministic measurement** (own Python specialists + 53 curated
+scripts) with **LLM-driven judgment** (24 sub-skills + 18 specialist agents), and
 synthesises everything into one weighted, prioritised report.
+
+The audit logic is anchored in primary-source Google guidance and this is a native,
+self-contained port of the MIT toolkit
+[AgriciDaniel/claude-seo](https://github.com/AgriciDaniel/claude-seo) v2.2.5 —
+see [Attribution & License](#attribution--license).
 
 ---
 
