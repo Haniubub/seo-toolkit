@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# Wrapper: nutzt Python 3 (Basis-Umgebung) + workspace-lokale pylibs/ und Playwright-Browser.
+set -euo pipefail
+HERE="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+export PLAYWRIGHT_BROWSERS_PATH="${PLAYWRIGHT_BROWSERS_PATH:-$HERE/browsers}"
+export PYTHONUNBUFFERED=1
+export PYTHONPATH="$HERE/pylibs:$HERE/scripts:${PYTHONPATH:-}"
+PY="${PYTHON:-python3}"
+exec "$PY" "$HERE/seo.py" "$@"
