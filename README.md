@@ -34,6 +34,47 @@ Every recommendation carries the four claude-seo fields:
 
 ---
 
+## Cost per audit — DeepSeek Harness vs Claude Code
+
+The judgment layer uses an LLM, so a full audit costs real tokens. But the
+observable layer is **pure local Python** (53 scripts + `lib/`) — it runs for **$0
+in tokens**. The only spend is the LLM reasoning over those findings, and that is
+the whole reason this port is worth switching to.
+
+| Model (per 1M tokens — in / out) | Input | Output | **Cost per full audit** |
+|---------------------------------|-------|--------|--------------------------|
+| Claude Opus 5 | $5.00 | $25.00 | **≈ $1.13** |
+| Claude Sonnet 5 | $2.00 | $10.00 | **≈ $0.45** |
+| Claude Haiku 4.5 | $1.00 | $5.00 | **≈ $0.23** |
+| **DeepSeek V3.2** | **$0.27** | **$0.40** | **≈ $0.04** |
+
+**Worked example** — one full `./seo audit` on a local-service site spawns the
+always-on agents (technical, content/E-E-A-T, schema, page, sxo, geo) plus a few
+industry-specific ones, then synthesises the weighted report. Measure that as
+**100,000 input tokens and 25,000 output tokens** per audit:
+
+```
+Claude Opus 5:   (0.10 M × $5)  + (0.025 M × $25)  = $0.50 + $0.625 = $1.13
+Claude Sonnet 5: (0.10 M × $2)  + (0.025 M × $10)  = $0.20 + $0.25  = $0.45
+DeepSeek V3.2:   (0.10 M × $0.27)+ (0.025 M × $0.40) = $0.027 + $0.01 = $0.037
+```
+
+So the same audit costs **≈ $0.04 on DeepSeek** against **≈ $0.45 on Claude
+Sonnet** and **≈ $1.13 on Claude Opus** — roughly **12× cheaper** than Sonnet and
+**30× cheaper** than Opus. Run 20 sites a day and Claude Opus would bill you
+**≈ $22.60** for the LLM judgment alone; DeepSeek does the same for **≈ $0.74**.
+
+The measurement layer never touches the LLM, so a `technical`, `schema` or
+`local` check can be **$0** — only the reasoning steps that need judgement cost
+anything.
+
+> Prices are indicative list rates as of August 2026 and change frequently.
+> DeepSeek rates per [OpenRouter](https://openrouter.ai/deepseek); Claude rates
+> per [Anthropic pricing](https://platform.claude.com/docs/en/about-claude/pricing).
+> Token volumes are illustrative of a typical multi-agent audit and vary by site.
+
+---
+
 ## Quick start
 
 ```bash
