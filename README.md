@@ -36,6 +36,7 @@ see [Attribution & License](#attribution--license).
 - [Architecture](#architecture)
 - [Requirements](#requirements)
 - [Key-gated features](#key-gated-features)
+- [Security & credentials](#security--credentials)
 - [Sources & References](#sources--references)
 - [Attribution & License](#attribution--license)
 
@@ -229,6 +230,22 @@ seo-toolkit/
 Google APIs (PageSpeed, CrUX, GSC, GA4), DataForSEO, Firecrawl, Ahrefs, Bing and
 Banana are **ported but require their own credentials**. Without them the core
 measurement still works fully.
+
+## Security & credentials
+
+Your API keys are read from **environment variables** at runtime
+(`os.environ.get(...)`) — nothing is stored in the repo or in a config file that
+gets committed. A few best practices:
+
+- Use **scoped, temporary keys** for audits (a throwaway token or a limited-key
+  credential with only the permissions you need).
+- **Delete the key when you're done** — after the audit, revoke/remove it. Don't
+  leave it sitting in your shell profile.
+- Keys are redacted from any printed or saved output, but treat them as live
+  secrets regardless: never paste a real key into a log, an issue, or a shared
+  config.
+- The core audit needs **no key at all** — credentials only unlock the optional
+  Google/DataForSEO/Firecrawl/Ahrefs/Bing data.
 
 ---
 
