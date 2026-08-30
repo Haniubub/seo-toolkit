@@ -1,5 +1,7 @@
 # seo-audit — Local SEO & Technical Audit Toolkit
 
+[English](README.md) | [简体中文](README.zh.md)
+
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 ![Python](https://img.shields.io/badge/python-3.10%2B-blue)
 [![CI](https://github.com/Haniubub/seo-toolkit/actions/workflows/ci.yml/badge.svg)](https://github.com/Haniubub/seo-toolkit/actions)
@@ -25,7 +27,7 @@ self-contained port of the MIT toolkit
 see [Attribution & License](#attribution--license).
 
 <p align="center">
-  <img src="docs/assets/fanout.png" alt="seo-audit gated multi-agent fan-out" width="760">
+  <img src="docs/assets/fanout.png" alt="seo-audit gated multi-agent fan-out" width="840">
 </p>
 
 ---
