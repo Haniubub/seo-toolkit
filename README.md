@@ -24,6 +24,10 @@ self-contained port of the MIT toolkit
 [AgriciDaniel/claude-seo](https://github.com/AgriciDaniel/claude-seo) v2.2.5 —
 see [Attribution & License](#attribution--license).
 
+<p align="center">
+  <img src="docs/assets/fanout.png" alt="seo-audit gated multi-agent fan-out" width="760">
+</p>
+
 ---
 
 ## Table of Contents
