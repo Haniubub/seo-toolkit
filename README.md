@@ -123,11 +123,14 @@ this port is worth switching to.
 > Full comparison below — the number holds for every Claude tier you would
 > otherwise run (Sonnet 5, Opus 5, even Haiku).
 
-| Model (per 1M tokens — in / out) | Input | Output | **Cost per full audit** |
-|---------------------------------|-------|--------|--------------------------|
-| Claude Sonnet 5 (cheapest tier) | $2.00 | $10.00 | **≈ $0.45** |
-| Claude Opus 5 (top tier) | $5.00 | $25.00 | **≈ $1.13** |
-| **DeepSeek V3.2** | **$0.27** | **$0.40** | **≈ $0.04** |
+| Model (per 1M tokens — in / out) | Input | Output | **Cost per full audit** | **Cost × 50** | **Cost × 500** |
+|---------------------------------|-------|--------|--------------------------|---------------|----------------|
+| Claude Sonnet 5 (cheapest tier) | $2.00 | $10.00 | **≈ $0.45** | ≈ $22.50 | ≈ $225.00 |
+| Claude Opus 5 (top tier) | $5.00 | $25.00 | **≈ $1.13** | ≈ $56.50 | ≈ $565.00 |
+| **DeepSeek V3.2** | **$0.27** | **$0.40** | **≈ $0.04** | ≈ $2.00 | ≈ $18.50 |
+
+The gap only widens at volume. At 500 audits Claude Opus would bill you
+**≈ $565** for the LLM judgment — DeepSeek runs the same **≈ $18.50**.
 
 **Worked example** — one full `./seo audit` on a local-service site spawns the
 always-on agents (technical, content/E-E-A-T, schema, page, sxo, geo) plus a few
@@ -147,8 +150,8 @@ Claude tier you would otherwise run. At 20 sites a day Claude would bill you
 **≈ $0.74**.
 
 The measurement layer never touches the LLM, so a `technical`, `schema` or
-`local` check can be **$0** — only the reasoning steps that need judgement cost
-anything.
+`local` check costs **$0 in LLM tokens** — only the reasoning steps that need
+judgement cost anything.
 
 > Prices are indicative list rates as of August 2026 and change frequently.
 > DeepSeek rates per [OpenRouter](https://openrouter.ai/deepseek); Claude rates
