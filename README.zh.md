@@ -17,7 +17,7 @@
 审计逻辑以 Google 官方一手资料为依据。本项目是 [AgriciDaniel/claude-seo](https://github.com/AgriciDaniel/claude-seo) v2.2.5 的一个原生、自包含移植 —— 参见 [署名与许可](#署名与许可)。
 
 <p align="center">
-  <img src="docs/assets/fanout.png" alt="seo-audit gated multi-agent fan-out" width="840">
+  <img src="docs/assets/fanout.zh.png" alt="seo-audit 门控式多代理扇出" width="840">
 </p>
 
 ---
