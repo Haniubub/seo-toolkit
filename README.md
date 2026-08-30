@@ -30,6 +30,7 @@ see [Attribution & License](#attribution--license).
 
 - [What it does](#what-it-does)
 - [Example output](#example-output)
+- [How it compares](#how-it-compares)
 - [Cost per audit — DeepSeek Harness vs Claude Code](#cost-per-audit--deepseek-harness-vs-claude-code)
 - [Quick start (Gated multi-agent fan-out)](#quick-start)
 - [Architecture](#architecture)
@@ -85,12 +86,37 @@ dependency-ordered action plan.
 
 ---
 
+## How it compares
+
+Most SEO automation on GitHub falls into a few buckets, and most cover only one
+of them. This toolkit is the only one that combines all four:
+
+| Capability | Single-feature tools | Claude-Code-only | Hobby projects | Agent frameworks | **seo-audit** |
+|------------|:--:|:--:|:--:|:--:|:--:|
+| Full audit (technical + content + schema + local) | — | ✅ | — | — | ✅ |
+| Deterministic measurement layer (no LLM for the crawl) | — | — | — | — | ✅ |
+| Weighted, Google-aligned scoring | — | — | — | — | ✅ |
+| Gated multi-agent fan-out by business type | — | — | — | — | ✅ |
+| Runs locally, no SaaS / no per-site pricing | — | — | — | — | ✅ |
+| Secret redaction + sandbox hardening | — | — | — | — | ✅ |
+| Drift tracking (baseline / compare / history) | — | — | — | — | ✅ |
+| Pluggable extensions (DataForSEO, Firecrawl, Ahrefs, Bing) | — | — | — | — | ✅ |
+
+The through-line: **measurement** is deterministic Python (repeatable, cheap),
+**judgment** is LLM-backed, and the two are gated so you only run the agents a
+site actually needs. That combination — plus primary-source Google guidance and
+cost transparency — is what separates it from the single-feature and
+Claude-locked alternatives.
+
+---
+
 ## Cost per audit — DeepSeek Harness vs Claude Code
 
-The judgment layer uses an LLM, so a full audit costs real tokens. But the
-observable layer is **pure local Python** (53 scripts + `lib/`) — it runs for **$0
-in tokens**. The only spend is the LLM reasoning over those findings, and that is
-the whole reason this port is worth switching to.
+The judgment layer uses an LLM, so that part costs real tokens. But the
+measurement layer is **pure local Python** (53 scripts + `lib/`) — it runs on
+your machine for **$0 in LLM tokens**. Only the LLM reasoning over those findings
+costs anything, and on DeepSeek that's a few cents per audit — the whole reason
+this port is worth switching to.
 
 > ### 💡 **12×–30× cheaper per audit** than running the same audit on Claude.
 > Full comparison below — the number holds for every Claude tier you would
@@ -131,6 +157,8 @@ anything.
 ---
 
 ## Quick start
+
+New here? See [docs/TUTORIAL.md](docs/TUTORIAL.md) — an end-to-end audit in 5 minutes.
 
 ```bash
 cd seo-toolkit
