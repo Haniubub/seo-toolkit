@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>How to run a full SEO audit inside DeepSeek Harness — locally, without Claude Code</title>
+  <meta name="description" content="A practical tutorial: run a complete, weighted SEO audit directly in DeepSeek Harness with seo-audit — 53 Python scripts + 24 sub-skills + 18 agents, no Claude Code, no API key for the core audit, nothing leaves your machine.">
+  <link rel="stylesheet" href="assets/style.css">
+  <link rel="canonical" href="https://haniubub.github.io/seo-toolkit/blog.html">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "How to run a full SEO audit inside DeepSeek Harness — locally, without Claude Code",
+    "description": "A practical tutorial on running a complete, weighted SEO audit directly in DeepSeek Harness with seo-audit.",
+    "url": "https://haniubub.github.io/seo-toolkit/blog.html",
+    "author": {"@type":"Person","name":"seo-audit"},
+    "publisher": {"@type":"Organization","name":"seo-audit"},
+    "datePublished": "2026-08-31",
+    "mainEntityOfPage": "https://haniubub.github.io/seo-toolkit/blog.html"
+  }
+  </script>
+</head>
+<body>
+<header class="site"><div class="wrap">
+  <a class="brand" href="index.html">seo-audit</a>
+  <nav>
+    <a href="technical.html">Technical</a><a href="schema.html">Schema</a><a href="local.html">Local</a><a href="geo.html">GEO</a><a href="content.html">Content</a><a href="install.html">Install</a><a href="blog.html">Blog</a>
+  </nav>
+</div></header>
+<div class="wrap">
+  <section class="hero">
+    <h1>Run a full SEO audit inside DeepSeek Harness — locally, without Claude Code</h1>
+    <p class="lead">Most SEO audit skills are built for Claude Code. If you work in DeepSeek Harness (DSH), that means leaving your environment — or making do with a partial check. seo-audit closes that gap: a complete, weighted SEO audit that runs natively in DSH, entirely on your machine.</p>
+  </section>
+
+  <section class="panel">
+    <h2 style="margin-top:0">Why a DSH-native audit matters</h2>
+    <p>DeepSeek Harness is plugin-first, but a serious SEO audit needs both deterministic measurement and judgment — crawlability, indexability, schema, E-E-A-T, local/GBP, GEO/AI-Overview readiness, Core Web Vitals. seo-audit brings all of it into the harness you already use, with the audit logic anchored in Google's primary-source guidance.</p>
+    <table class="table">
+      <tr><th>Layer</th><th>What it is</th><th>How it runs</th></tr>
+      <tr><td><strong>Measurement</strong></td><td>5 Python specialists + 53 curated scripts</td><td><code>./seo &lt;command&gt;</code></td></tr>
+      <tr><td><strong>Judgment</strong></td><td>24 sub-skills + 18 specialists</td><td>Agent executes via subagent / workflow</td></tr>
+    </table>
+  </section>
+
+  <section class="panel">
+    <h2 style="margin-top:0">Get the toolkit</h2>
+    <pre><code>git clone https://github.com/Haniubub/seo-toolkit.git
+cd seo-toolkit
+./setup.sh</code></pre>
+    <p><code>./setup.sh</code> installs the pinned Python deps into a workspace-local <code>pylibs/</code> and Playwright Chromium into <code>browsers/</code> — nothing touches your global Python or system.</p>
+  </section>
+
+  <section class="panel">
+    <h2 style="margin-top:0">Run your first audit</h2>
+    <pre><code>./seo doctor                     # sanity check
+./seo audit https://example.com   # full weighted audit</code></pre>
+    <p><code>./seo audit</code> detects the business type, then fans out to only the relevant sub-agents in parallel (never all 18), and merges the results into one weighted score. Every recommendation carries the four claude-seo fields:</p>
+    <p><strong>Observation → Dependency → Failure signal → Early indicator.</strong></p>
+  </section>
+
+  <section class="panel">
+    <h2 style="margin-top:0">The honest comparison</h2>
+    <p>Unlike SEO skills tied to Claude Code, seo-audit is <strong>DSH-native</strong>: it runs in the harness you already use, no Claude Code required, no API key for the core audit, and the measurement layer is pure local Python. Everything stays on your machine.</p>
+    <table class="table">
+      <tr><th></th><th>Claude Code SEO skills</th><th>seo-audit</th></tr>
+      <tr><td>Environment</td><td>Claude Code</td><td>DeepSeek Harness (DSH)</td></tr>
+      <tr><td>Claude Code required</td><td>Yes</td><td>No</td></tr>
+      <tr><td>Core audit API key</td><td>Varies</td><td>None</td></tr>
+      <tr><td>Runs locally</td><td>—</td><td>Yes</td></tr>
+    </table>
+  </section>
+
+  <section class="panel">
+    <h2 style="margin-top:0">What you get</h2>
+    <p>A weighted SEO health score (Technical 22% · Content 23% · On-Page 20% · Schema 10% · Performance 10% · AI-Readiness 10% · Images 5%), a prioritised action plan sorted by dependency, and a falsifiability check per recommendation — so you know whether each fix actually worked.</p>
+    <p><a href="https://github.com/Haniubub/seo-toolkit">→ Try seo-audit on a real site</a></p>
+  </section>
+</div>
+<footer class="site"><div class="wrap">seo-audit · a DSH-native SEO audit toolkit for DeepSeek Harness · MIT</div></footer>
+</body>
+</html>
