@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Content quality & E-E-A-T analysis with seo-audit</title>
+  <meta name="description" content="Content quality and E-E-A-T analysis with AI citation-readiness using seo-audit. Google's Who/How/Why test, readability, thin content, content depth. Local, free, no API key.">
+  <link rel="stylesheet" href="assets/style.css">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"seo-audit","applicationCategory":"DeveloperApplication","operatingSystem":"macOS, Linux","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://haniubub.github.io/seo-toolkit/content.html"}</script>
+</head>
+<body>
+<header class="site"><div class="wrap">
+  <a class="brand" href="index.html">seo-audit</a>
+  <nav>
+    <a href="technical.html">Technical</a><a href="schema.html">Schema</a><a href="local.html">Local</a><a href="geo.html">GEO</a><a href="content.html">Content</a><a href="install.html">Install</a>
+  </nav>
+</div></header>
+<div class="wrap">
+  <section class="hero">
+    <h1>Content that earns trust — and AI citations</h1>
+    <p class="lead"><code>./seo content &lt;url|file&gt;</code> scores content against Google's quality guidance, with an AI-citation-readiness dimension built in. It runs the canonical Who/How/Why heuristic before scoring E-E-A-T sub-factors, and flags thin content, readability and depth issues.</p>
+  </section>
+
+  <section class="panel">
+    <h2 style="margin-top:0">The anchor: Google's Who / How / Why test</h2>
+    <table class="table">
+      <tr><th>Question</th><th>What to look for</th></tr>
+      <tr><td>Who</td><td>Clear authorship and entity behind the content.</td></tr>
+      <tr><td>How</td><td>Evidence of experience and first-hand information.</td></tr>
+      <tr><td>Why</td><td>A clear, beneficial reason for the page to exist.</td></tr>
+    </table>
+    <p>Every page audit passes this before E-E-A-T sub-factor scoring.</p>
+  </section>
+
+  <section class="panel">
+    <h2 style="margin-top:0">Run it</h2>
+    <pre><code>./seo content https://example.com
+./seo content page.html
+./seo content-brief "bavarian restaurant rosenheim"  # brief from a topic</code></pre>
+  </section>
+
+  <section class="panel">
+    <h2 style="margin-top:0">FAQ</h2>
+    <dl class="faq">
+      <dt>E-E-A-T vs AI citation readiness?</dt><dd>seo-audit treats them together — experience/authority/expertise/trust is also what makes a passage citable by an AI engine.</dd>
+      <dt>Does it need an API key for readability?</dt><dd>No. Content scoring runs locally and keylessly.</dd>
+      <dt>Can it work on a file, not a URL?</dt><dd>Yes — pass a local file as well as a URL.</dd>
+    </dl>
+  </section>
+</div>
+<footer class="site"><div class="wrap">seo-audit · content &amp; E-E-A-T for DeepSeek Harness · MIT</div></footer>
+</body>
+</html>

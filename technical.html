@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Technical SEO audit with seo-audit — crawlability, indexability, Core Web Vitals</title>
+  <meta name="description" content="Run a technical SEO audit with seo-audit: 9 categories — crawlability, indexability, security, URL structure, mobile, Core Web Vitals, structured data, JavaScript rendering, IndexNow. Local, free, no API key.">
+  <link rel="stylesheet" href="assets/style.css">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"seo-audit","applicationCategory":"DeveloperApplication","operatingSystem":"macOS, Linux","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://haniubub.github.io/seo-toolkit/technical.html"}</script>
+</head>
+<body>
+<header class="site"><div class="wrap">
+  <a class="brand" href="index.html">seo-audit</a>
+  <nav>
+    <a href="technical.html">Technical</a><a href="schema.html">Schema</a><a href="local.html">Local</a><a href="geo.html">GEO</a><a href="content.html">Content</a><a href="install.html">Install</a>
+  </nav>
+</div></header>
+<div class="wrap">
+  <section class="hero">
+    <h1>Technical SEO audit, done properly</h1>
+    <p class="lead">Catch the issues that quietly cap a site's visibility — <code>./seo technical &lt;url&gt;</code> covers 9 categories in one pass, from crawlability and indexability through Core Web Vitals, structured data, JavaScript rendering and IndexNow.</p>
+  </section>
+
+  <section class="panel">
+    <h2 style="margin-top:0">The 9 categories</h2>
+    <ol>
+      <li><strong>Crawlability</strong> — robots.txt, XML sitemap, blocked resources.</li>
+      <li><strong>Indexability</strong> — canonical, noindex, duplicate content.</li>
+      <li><strong>Security</strong> — HTTPS, security headers.</li>
+      <li><strong>URL structure</strong> — clean, crawlable URLs.</li>
+      <li><strong>Mobile</strong> — usable, mobile-friendly layout.</li>
+      <li><strong>Core Web Vitals</strong> — LCP, INP, CLS.</li>
+      <li><strong>Structured data</strong> — schema.org correctness.</li>
+      <li><strong>JavaScript rendering</strong> — content reachable without JS.</li>
+      <li><strong>IndexNow</strong> — protocol submission.</li>
+    </ol>
+  </section>
+
+  <section class="panel">
+    <h2 style="margin-top:0">Run it</h2>
+    <pre><code>./seo technical https://example.com
+./seo audit https://example.com      # full weighted audit</code></pre>
+    <p>Core Web Vitals are always reported as <strong>INP</strong>, never FID. Every finding ships with <code>Observation → Dependency → Failure signal → Early indicator</code>.</p>
+  </section>
+
+  <section class="panel">
+    <h2 style="margin-top:0">FAQ</h2>
+    <dl class="faq">
+      <dt>Does a technical audit need an API key?</dt><dd>No. The core technical audit runs fully locally — free and keyless.</dd>
+      <dt>How is load time measured?</dt><dd>Without a Google key, load time is a lab estimate; with a CrUX/PSI key, you get live field data.</dd>
+      <dt>How fast is it?</dt><dd>A single command returns the 9 categories in one pass, then you drill into what matters most.</dd>
+    </dl>
+  </section>
+</div>
+<footer class="site"><div class="wrap">seo-audit · technical SEO audit for DeepSeek Harness · MIT</div></footer>
+</body>
+</html>

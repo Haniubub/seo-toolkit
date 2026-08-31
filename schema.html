@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Schema.org / JSON-LD validation with seo-audit</title>
+  <meta name="description" content="Detect, validate and generate Schema.org structured data with seo-audit. JSON-LD preferred. Detect rich-result eligibility and fix broken markup. Local, free, no API key.">
+  <link rel="stylesheet" href="assets/style.css">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"seo-audit","applicationCategory":"DeveloperApplication","operatingSystem":"macOS, Linux","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://haniubub.github.io/seo-toolkit/schema.html"}</script>
+</head>
+<body>
+<header class="site"><div class="wrap">
+  <a class="brand" href="index.html">seo-audit</a>
+  <nav>
+    <a href="technical.html">Technical</a><a href="schema.html">Schema</a><a href="local.html">Local</a><a href="geo.html">GEO</a><a href="content.html">Content</a><a href="install.html">Install</a>
+  </nav>
+</div></header>
+<div class="wrap">
+  <section class="hero">
+    <h1>Schema.org, without the guesswork</h1>
+    <p class="lead"><code>./seo schema &lt;url&gt;</code> detects, validates and helps you generate structured data — JSON-LD is the recommended format, and the tool tells you exactly what's missing or wrong.</p>
+  </section>
+
+  <section class="panel">
+    <h2 style="margin-top:0">Detection</h2>
+    <ul>
+      <li>Scan page source for JSON-LD <code>application/ld+json</code></li>
+      <li>Check Microdata (<code>itemscope</code>, <code>itemprop</code>)</li>
+      <li>Check RDFa (<code>typeof</code>, <code>property</code>)</li>
+      <li>Prefer JSON-LD as the primary format (Google's stated preference)</li>
+    </ul>
+  </section>
+
+  <section class="panel">
+    <h2 style="margin-top:0">Run it</h2>
+    <pre><code>./seo schema https://example.com
+./seo schema https://example.com --generate   # generate valid JSON-LD</code></pre>
+    <p>It validates against the schema and LocalBusiness types, and flags deprecated types so you don't ship outdated markup.</p>
+  </section>
+
+  <section class="panel">
+    <h2 style="margin-top:0">FAQ</h2>
+    <dl class="faq">
+      <dt>Is JSON-LD or Microdata better?</dt><dd>JSON-LD. It's Google's stated preference and scales cleanly.</dd>
+      <dt>Should I still add FAQ schema?</dt><dd>FAQ rich results were withdrawn for all sites. Use QAPage for genuine Q&amp;A, and keep FAQ structure as semantic content, not a SERP trick.</dd>
+      <dt>HowTo schema?</dt><dd>Never. It's deprecated since September 2023. seo-audit will flag it.</dd>
+    </dl>
+  </section>
+</div>
+<footer class="site"><div class="wrap">seo-audit · schema.org audit for DeepSeek Harness · MIT</div></footer>
+</body>
+</html>

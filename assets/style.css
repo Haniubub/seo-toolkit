@@ -1,0 +1,52 @@
+:root {
+  --ink: #1f2430;
+  --muted: #5b6472;
+  --brand: #2b5f8f;
+  --brand-2: #3b82a8;
+  --bg: #ffffff;
+  --card: #f5f7fa;
+  --line: #e3e8ef;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: var(--ink);
+  background: var(--bg);
+  line-height: 1.6;
+}
+.wrap { max-width: 950px; margin: 0 auto; padding: 0 20px; }
+header.site {
+  background: linear-gradient(135deg, var(--brand) 0%, var(--brand-2) 100%);
+  color: #fff;
+  padding: 22px 0;
+}
+header.site .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+header.site a { color: #fff; text-decoration: none; }
+header.site .brand { font-weight: 700; font-size: 1.15rem; }
+header.site nav a { margin-left: 16px; font-size: .92rem; opacity: .95; }
+.hero { padding: 56px 0 40px; }
+.hero h1 { font-size: 2.3rem; margin: 0 0 14px; line-height: 1.15; }
+.hero p.lead { font-size: 1.12rem; color: var(--muted); max-width: 760px; }
+.cta { margin: 24px 0; }
+.cta code { background: var(--card); padding: 6px 10px; border-radius: 6px; border: 1px solid var(--line); }
+section.panel {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 24px 26px;
+  margin: 18px 0;
+}
+h2 { font-size: 1.5rem; margin-top: 40px; }
+h3 { font-size: 1.12rem; margin: 26px 0 8px; }
+.table { border-collapse: collapse; width: 100%; margin: 14px 0; }
+.table th, .table td { border: 1px solid var(--line); padding: 8px 10px; text-align: left; }
+.table th { background: var(--card); font-weight: 600; }
+.toc { columns: 2; }
+.toc a { display: block; padding: 5px 0; color: var(--brand); text-decoration: none; }
+.faq dt { font-weight: 600; margin-top: 18px; }
+.faq dd { margin: 4px 0 0; color: var(--ink); }
+footer.site { border-top: 1px solid var(--line); margin-top: 60px; padding: 24px 0; color: var(--muted); font-size: .9rem; }
+code, pre { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+pre { background: #0f172a; color: #e2e8f0; padding: 14px 16px; border-radius: 8px; overflow: auto; }
+.badge { background: var(--card); border: 1px solid var(--line); padding: 3px 8px; border-radius: 20px; font-size: .8rem; color: var(--muted); }

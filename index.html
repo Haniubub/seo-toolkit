@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>seo-audit — a free, local & technical SEO audit toolkit for DeepSeek Harness</title>
+  <meta name="description" content="seo-audit is a free, local & technical SEO audit toolkit for DeepSeek Harness: 53 Python scripts + 24 sub-skills + 18 agents, weighted score, gated multi-agent fan-out, schema.org, E-E-A-T, GBP, GEO/AI Overviews. No SaaS, no per-domain pricing, no API key required for the core audit.">
+  <link rel="stylesheet" href="assets/style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "seo-audit",
+    "applicationCategory": "DeveloperApplication",
+    "operatingSystem": "macOS, Linux",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "description": "A free, local & technical SEO audit toolkit for DeepSeek Harness (DSH): deterministic Python measurement (53 scripts plus lib/) + LLM judgment (24 sub-skills + 18 agents), weighted scoring, gated multi-agent fan-out, schema.org, E-E-A-T, GBP and GEO/AI Overviews — no SaaS, no per-domain pricing, no API key required for the core audit.",
+    "url": "https://haniubub.github.io/seo-toolkit/",
+    "license": "https://github.com/Haniubub/seo-toolkit/blob/main/LICENSE"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type":"Question","name":"Is seo-audit free?","acceptedAnswer":{"@type":"Answer","text":"Yes. It is MIT-licensed and runs locally. The core audit needs no API key, no account and no domain pricing — only Python 3.10+, requests, beautifulsoup4, lxml and Playwright, installed into a workspace-local pylibs/ by ./setup.sh."}},
+      {"@type":"Question","name":"Does it need Claude Code or a subscription?","acceptedAnswer":{"@type":"Answer","text":"No. seo-audit is a self-contained port of claude-seo and runs standalone. It needs no Claude Code, no plugin marketplace and no third-party SaaS."}},
+      {"@type":"Question","name":"How does it do a full audit?","acceptedAnswer":{"@type":"Answer","text":"Run ./seo audit <url>. It tests the business type, then fans out to only the relevant sub-agents in parallel (never all 18), and merges the results into one weighted score: Technical 22%, Content 23%, On-Page 20%, Schema 10%, Performance 10%, AI-Readiness 10%, Images 5%."}}
+    ]
+  }
+  </script>
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="index.html">seo-audit</a>
+    <nav>
+      <a href="technical.html">Technical</a>
+      <a href="schema.html">Schema</a>
+      <a href="local.html">Local</a>
+      <a href="geo.html">GEO</a>
+      <a href="content.html">Content</a>
+      <a href="install.html">Install</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap">
+  <section class="hero">
+    <h1>Everything you need to audit a website's search visibility — completely local.</h1>
+    <p class="lead"><strong>seo-audit</strong> is a free, local &amp; technical SEO audit toolkit for DeepSeek Harness. One command turns a full technical, content, schema, local and generative-engine audit into a weighted, prioritised action plan — no SaaS, no per-domain pricing, no API key for the core audit.</p>
+    <div class="cta">
+      <code>git clone https://github.com/Haniubub/seo-toolkit && cd seo-toolkit &amp;&amp; ./setup.sh</code><br>
+      <code>./seo audit https://example.com</code>
+    </div>
+  </section>
+
+  <section class="panel">
+    <h2 style="margin-top:0">What it does</h2>
+    <p>split the work cleanly: the <strong>measurement</strong> layer is deterministic (own Python specialists + 53 curated scripts via <code>./seo &lt;cmd&gt;</code>), and the <strong>judgment</strong> layer is LLM-driven (24 sub-skills + 18 specialist agents for E-E-A-T, GEO/AI Overviews, Local/GBP, SXO, schema and more). Every recommendation carries the four claude-seo fields.</p>
+    <table class="table">
+      <tr><th>Layer</th><th>What it is</th><th>How it runs</th></tr>
+      <tr><td><strong>Measurement</strong></td><td>5 Python specialists + 53 curated scripts</td><td><code>./seo &lt;command&gt;</code></td></tr>
+      <tr><td><strong>Judgment</strong></td><td>24 sub-skills + 18 agent prompts</td><td>Agent executes via subagent / workflow</td></tr>
+    </table>
+  </section>
+
+  <section class="panel">
+    <h2 style="margin-top:0">The fastest path from URL to action plan</h2>
+    <ol>
+      <li>Broad, then deep — <code>./seo audit &lt;url&gt;</code>, then drill into the highest-impact findings.</li>
+      <li>Gated multi-agent fan-out — only the agents your site actually needs (~7–10, never all 18).</li>
+      <li>One weighted score, sorted by dependency, with a falsifiability check per recommendation.</li>
+      <li>Every recommendation ships with <strong>Observation → Dependency → Failure signal → Early indicator</strong>.</li>
+    </ol>
+  </section>
+
+  <section class="panel">
+    <h2 style="margin-top:0">Coverage</h2>
+    <table class="table">
+      <tr><th>Area</th><th>Command</th></tr>
+      <tr><td>Technical SEO (9 categories)</td><td><code>./seo technical &lt;url&gt;</code></td></tr>
+      <tr><td>On-page / content signals</td><td><code>./seo page &lt;url&gt;</code></td></tr>
+      <tr><td>Schema.org / LocalBusiness</td><td><code>./seo schema &lt;url&gt;</code></td></tr>
+      <tr><td>Local / NAP signals</td><td><code>./seo local &lt;url&gt;</code></td></tr>
+      <tr><td>Render, hydration, console errors</td><td><code>./seo visual &lt;url&gt;</code></td></tr>
+      <tr><td>Sitemap discovery &amp; validation</td><td><code>./seo sitemap &lt;url&gt;</code></td></tr>
+      <tr><td>QRG content-quality scoring</td><td><code>./seo content &lt;url|file&gt;</code></td></tr>
+      <tr><td>Free backlink sources</td><td><code>./seo backlinks &lt;url&gt;</code></td></tr>
+      <tr><td>Keyword clustering</td><td><code>./seo cluster &lt;keyword&gt;</code></td></tr>
+      <tr><td>Content brief</td><td><code>./seo content-brief &lt;topic&gt; [kw]</code></td></tr>
+      <tr><td>Drift tracking</td><td><code>./seo drift baseline|compare|history &lt;url&gt;</code></td></tr>
+      <tr><td>Google APIs (PSI/CrUX/GSC/GA4)</td><td><code>./seo google &lt;sub&gt; [args]</code></td></tr>
+      <tr><td>Run any of the 53 scripts</td><td><code>./seo run &lt;script.py&gt; [args]</code></td></tr>
+    </table>
+  </section>
+
+  <section class="panel">
+    <h2 style="margin-top:0">Frequently asked questions</h2>
+    <dl class="faq">
+      <dt>Is seo-audit free?</dt>
+      <dd>Yes — MIT-licensed and local. The core audit needs no API key, no account and no domain pricing; only Python 3.10+, requests, beautifulsoup4, lxml and Playwright.</dd>
+      <dt>Does it need Claude Code or a subscription?</dt>
+      <dd>No. It's a self-contained port of claude-seo and runs standalone — no Claude Code, no plugin marketplace, no third-party SaaS.</dd>
+      <dt>Does it work without a Google API key?</dt>
+      <dd>The core audit works fully without any key. Google APIs (PageSpeed, CrUX, GSC, GA4), DataForSEO, Firecrawl, Ahrefs, Bing and Banana are ported but only activate once you supply their own credentials.</dd>
+      <dt>What are the four claude-seo fields?</dt>
+      <dd>Observation → Dependency → Failure signal → Early indicator. Field 2 sets the order, field 3 tells you how you'd know it worked, field 4 is the leading signal to watch.</dd>
+    </dl>
+  </section>
+</div>
+
+<footer class="site"><div class="wrap">seo-audit · a free, local &amp; technical SEO audit toolkit for DeepSeek Harness · MIT</div></footer>
+</body>
+</html>

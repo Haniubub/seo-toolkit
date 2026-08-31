@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Install seo-audit — free, local SEO audit toolkit for DeepSeek Harness</title>
+  <meta name="description" content="Install seo-audit in three steps: clone, run ./setup.sh (workspace-local deps + Playwright Chromium), then point the skill at it. No global Python install, no SaaS, no API key.">
+  <link rel="stylesheet" href="assets/style.css">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"seo-audit","applicationCategory":"DeveloperApplication","operatingSystem":"macOS, Linux","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://haniubub.github.io/seo-toolkit/install.html"}</script>
+</head>
+<body>
+<header class="site"><div class="wrap">
+  <a class="brand" href="index.html">seo-audit</a>
+  <nav>
+    <a href="technical.html">Technical</a><a href="schema.html">Schema</a><a href="local.html">Local</a><a href="geo.html">GEO</a><a href="content.html">Content</a><a href="install.html">Install</a>
+  </nav>
+</div></header>
+<div class="wrap">
+  <section class="hero">
+    <h1>Install in three steps</h1>
+    <p class="lead">Drop <code>seo-audit</code> into your DeepSeek Harness skills directory and you have a full local &amp; technical SEO audit engine. Nothing touches your global Python or system — dependencies and Chromium stay workspace-local.</p>
+  </section>
+
+  <section class="panel">
+    <h2 style="margin-top:0">1. Get the toolkit</h2>
+    <pre><code>git clone https://github.com/Haniubub/seo-toolkit.git
+cd seo-toolkit
+./setup.sh     # one command: pylibs/ + Chromium + smoke test</code></pre>
+  </section>
+
+  <section class="panel">
+    <h2 style="margin-top:0">2. Point the skill at it</h2>
+    <p>The skill looks for the toolkit in order:</p>
+    <ol>
+      <li><code>$SEO_TOOLKIT</code> — set this and you're done.</li>
+      <li>The <code>seo-toolkit/</code> folder beside this skill.</li>
+      <li><code>./seo</code> on <code>PATH</code>.</li>
+    </ol>
+  </section>
+
+  <section class="panel">
+    <h2 style="margin-top:0">3. Verify it works</h2>
+    <pre><code>./seo doctor                    # expect "Playwright-Chromium: OK"
+./seo audit https://example.com # full weighted audit</code></pre>
+    <p>The first <code>./seo doctor</code> may occasionally time out under a sandbox because it launches headless Chromium — just retry. It's a transient launch flake, not a broken install.</p>
+  </section>
+
+  <section class="panel">
+    <h2 style="margin-top:0">Requirements</h2>
+    <ul>
+      <li>Python 3.10+ on macOS/Linux</li>
+      <li><code>requests</code>, <code>beautifulsoup4</code>, <code>lxml</code>, <code>playwright</code></li>
+    </ul>
+  </section>
+</div>
+<footer class="site"><div class="wrap">seo-audit · local &amp; technical SEO audit toolkit for DeepSeek Harness · MIT</div></footer>
+</body>
+</html>
