@@ -208,6 +208,12 @@ Claude tier you would otherwise run. At 20 sites a day Claude would bill you
 **≈ $9.00–$22.60** for the LLM judgment alone; DeepSeek does the same for
 **≈ $0.74**.
 
+> 💡 **With DeepSeek V4-Flash the gap can be even larger.** The table above uses
+> the conservative DeepSeek V3.2 tiers. Running the same audit on **V4-Flash**
+> (`$0.14/M` in, `$0.28/M` out) lowers the DeepSeek side to **≈ $0.02**, which
+> raises the comparison to **~21× vs. Sonnet 5** and **~54× vs. Opus 5**. So the
+> honest range is **~12×–54×**, and it only improves with newer DeepSeek models.
+
 The measurement layer never touches the LLM, so a `technical`, `schema` or
 `local` check costs **$0 in LLM tokens** — only the reasoning steps that need
 judgement cost anything.
