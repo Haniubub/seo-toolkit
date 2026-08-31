@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="912" viewBox="0 0 1000 912" font-family="Noto Sans CJK SC">
+<rect width="1000" height="912" fill="#0B0D10"/>
+<rect width="1000" height="74" fill="#101318"/>
+<line x1="0" y1="74" x2="1000" y2="74" stroke="#23272E"/>
+<text x="40" y="49" font-size="30" fill="#F2F4F6">seo-audit</text>
+<text x="189" y="48" font-size="15" fill="#8A9099">· 门控式多智能体扇出</text>
+<rect x="809" y="22" width="151" height="30" rx="15" fill="none" stroke="#45C596" stroke-opacity="0.45"/>
+<text x="885" y="42" font-size="13" fill="#45C596" text-anchor="middle">本地运行 · 无 SaaS</text>
+<rect x="40" y="104" width="920" height="64" rx="8" fill="#14181D" stroke="#35597F"/>
+<text x="500" y="131" font-size="17" fill="#6AA5E4" text-anchor="middle">主智能体 — /seo audit &lt;url&gt;</text>
+<text x="500" y="153" font-size="13" fill="#8A9099" text-anchor="middle">识别业务类型 · 凭证门控</text>
+<line x1="500" y1="168" x2="500" y2="202" stroke="#3A4048"/>
+<path d="M496 196 L500 202 L504 196" fill="none" stroke="#3A4048" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="40" y="206" width="920" height="66" rx="8" fill="#191510" stroke="#7E6229"/>
+<text x="500" y="234" font-size="17" fill="#E3A73F" text-anchor="middle">门控 — 仅启动相关的子智能体</text>
+<text x="500" y="256" font-size="13" fill="#8A9099" text-anchor="middle">始终运行：technical · content/E-E-A-T · schema · page · sxo · geo</text>
+<line x1="500" y1="272" x2="500" y2="300" stroke="#3A4048"/>
+<line x1="260" y1="300" x2="740" y2="300" stroke="#3A4048"/>
+<line x1="260" y1="300" x2="260" y2="322" stroke="#3A4048"/>
+<path d="M256 316 L260 322 L264 316" fill="none" stroke="#3A4048" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="740" y1="300" x2="740" y2="322" stroke="#3A4048"/>
+<path d="M736 316 L740 322 L744 316" fill="none" stroke="#3A4048" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="40" y="332" width="440" height="246" rx="10" fill="#0F1216" stroke="#1E232A"/>
+<text x="56" y="358" font-size="13" fill="#45C596">按行业</text>
+<rect x="54" y="370" width="412" height="34" rx="6" fill="#171B21" stroke="#262B33"/>
+<text x="72" y="392" font-size="14"><tspan fill="#45C596">saas</tspan><tspan fill="#676D76"> → </tspan><tspan fill="#C9CED4">关键词聚类 · 程序化页面</tspan></text>
+<rect x="54" y="410" width="412" height="34" rx="6" fill="#171B21" stroke="#262B33"/>
+<text x="72" y="432" font-size="14"><tspan fill="#45C596">local</tspan><tspan fill="#676D76"> → </tspan><tspan fill="#C9CED4">本地 SEO · 地图</tspan></text>
+<rect x="54" y="450" width="412" height="34" rx="6" fill="#171B21" stroke="#262B33"/>
+<text x="72" y="472" font-size="14"><tspan fill="#45C596">ecom</tspan><tspan fill="#676D76"> → </tspan><tspan fill="#C9CED4">电商</tspan></text>
+<rect x="54" y="490" width="412" height="34" rx="6" fill="#171B21" stroke="#262B33"/>
+<text x="72" y="512" font-size="14"><tspan fill="#45C596">publisher</tspan><tspan fill="#676D76"> → </tspan><tspan fill="#C9CED4">关键词聚类 · 图片</tspan></text>
+<rect x="54" y="530" width="412" height="34" rx="6" fill="#171B21" stroke="#262B33"/>
+<text x="72" y="552" font-size="14"><tspan fill="#45C596">agency</tspan><tspan fill="#676D76"> → </tspan><tspan fill="#C9CED4">竞品页面</tspan></text>
+<rect x="520" y="332" width="440" height="246" rx="10" fill="#0F1216" stroke="#1E232A"/>
+<text x="536" y="358" font-size="13" fill="#45C596">按凭证</text>
+<rect x="534" y="370" width="412" height="34" rx="6" fill="#171B21" stroke="#262B33"/>
+<text x="552" y="392" font-size="14"><tspan fill="#45C596">google</tspan><tspan fill="#676D76"> → </tspan><tspan fill="#C9CED4">PSI / CrUX / GSC</tspan></text>
+<rect x="534" y="410" width="412" height="34" rx="6" fill="#171B21" stroke="#262B33"/>
+<text x="552" y="432" font-size="14"><tspan fill="#45C596">backlinks</tspan><tspan fill="#676D76"> → </tspan><tspan fill="#C9CED4">外链来源</tspan></text>
+<rect x="534" y="450" width="412" height="34" rx="6" fill="#171B21" stroke="#262B33"/>
+<text x="552" y="472" font-size="14"><tspan fill="#45C596">dataforseo</tspan><tspan fill="#676D76"> → </tspan><tspan fill="#C9CED4">实时数据</tspan></text>
+<rect x="534" y="490" width="412" height="34" rx="6" fill="#171B21" stroke="#262B33"/>
+<text x="552" y="512" font-size="14"><tspan fill="#45C596">firecrawl</tspan><tspan fill="#676D76"> → </tspan><tspan fill="#C9CED4">抓取</tspan></text>
+<line x1="260" y1="578" x2="260" y2="604" stroke="#3A4048"/>
+<line x1="740" y1="578" x2="740" y2="604" stroke="#3A4048"/>
+<line x1="260" y1="604" x2="740" y2="604" stroke="#3A4048"/>
+<line x1="500" y1="604" x2="500" y2="630" stroke="#3A4048"/>
+<path d="M496 624 L500 630 L504 624" fill="none" stroke="#3A4048" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="500" y="657" font-size="17" text-anchor="middle"><tspan fill="#6AA5E4">加权 SEO 健康分</tspan><tspan fill="#676D76" font-size="13">  ·  </tspan><tspan fill="#8A9099" font-size="13">由主智能体汇总</tspan></text>
+<text x="60" y="695" font-size="14" fill="#C9CED4">技术</text>
+<rect x="280" y="685" width="560" height="10" rx="5" fill="#1E232A"/>
+<rect x="280" y="685" width="492.8" height="10" rx="5" fill="#4D94DB"/>
+<text x="900" y="695" font-size="14" fill="#8A9099" text-anchor="end">22%</text>
+<text x="60" y="720" font-size="14" fill="#C9CED4">内容 / E-E-A-T</text>
+<rect x="280" y="710" width="560" height="10" rx="5" fill="#1E232A"/>
+<rect x="280" y="710" width="515.2" height="10" rx="5" fill="#4D94DB"/>
+<text x="900" y="720" font-size="14" fill="#8A9099" text-anchor="end">23%</text>
+<text x="60" y="745" font-size="14" fill="#C9CED4">页内优化</text>
+<rect x="280" y="735" width="560" height="10" rx="5" fill="#1E232A"/>
+<rect x="280" y="735" width="448.0" height="10" rx="5" fill="#4D94DB"/>
+<text x="900" y="745" font-size="14" fill="#8A9099" text-anchor="end">20%</text>
+<text x="60" y="770" font-size="14" fill="#C9CED4">结构化数据</text>
+<rect x="280" y="760" width="560" height="10" rx="5" fill="#1E232A"/>
+<rect x="280" y="760" width="224.0" height="10" rx="5" fill="#4D94DB"/>
+<text x="900" y="770" font-size="14" fill="#8A9099" text-anchor="end">10%</text>
+<text x="60" y="795" font-size="14" fill="#C9CED4">性能</text>
+<rect x="280" y="785" width="560" height="10" rx="5" fill="#1E232A"/>
+<rect x="280" y="785" width="224.0" height="10" rx="5" fill="#4D94DB"/>
+<text x="900" y="795" font-size="14" fill="#8A9099" text-anchor="end">10%</text>
+<text x="60" y="820" font-size="14" fill="#C9CED4">AI 就绪度</text>
+<rect x="280" y="810" width="560" height="10" rx="5" fill="#1E232A"/>
+<rect x="280" y="810" width="224.0" height="10" rx="5" fill="#4D94DB"/>
+<text x="900" y="820" font-size="14" fill="#8A9099" text-anchor="end">10%</text>
+<text x="60" y="845" font-size="14" fill="#C9CED4">图片</text>
+<rect x="280" y="835" width="560" height="10" rx="5" fill="#1E232A"/>
+<rect x="280" y="835" width="112.0" height="10" rx="5" fill="#4D94DB"/>
+<text x="900" y="845" font-size="14" fill="#8A9099" text-anchor="end">5%</text>
+<line x1="40" y1="866" x2="960" y2="866" stroke="#23272E"/>
+<text x="500" y="889" font-size="13" fill="#676D76" text-anchor="middle">确定性 Python 测量 · LLM 判断 · 按依赖排序的行动计划</text>
+</svg>
