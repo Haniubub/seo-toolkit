@@ -1,4 +1,4 @@
-# seo-audit — Local SEO & Technical Audit Toolkit
+# seo-audit — the DSH-native SEO audit toolkit for DeepSeek Harness
 
 [English](README.md) | [简体中文](README.zh.md)
 
@@ -9,10 +9,14 @@
 > **Status:** production-ready · **v1.0.0**
 
 
-A production-grade SEO audit toolkit that runs a full, weighted technical, content,
-schema and local audit on any website — **self-contained and strictly local**: no Claude
-Code, no plugin marketplace, no third-party SaaS, no per-domain pricing. It executes as a
+A production-grade SEO audit toolkit **built for DeepSeek Harness (DSH)** that runs a
+full, weighted technical, content, schema and local audit on any website — **self-contained
+and strictly local**: no Claude Code, no plugin marketplace, no third-party SaaS, no
+per-domain pricing, and **no API key required for the core audit**. It executes as a
 plain CLI + agent library in the DeepSeek Harness environment and works out of the box.
+
+Unlike SEO skills bound to Claude Code, seo-audit is **DSH-native**: you run it in the
+harness you already use, with nothing leaving your machine.
 
 Built for **local SEO**, **technical SEO**, **schema.org**, **E-E-A-T**, **GEO / AI Overviews**,
 **Google Business Profile (GBP)**, **on-page & content** audits across any industry.

@@ -1,4 +1,4 @@
-# seo-audit — 本地化与技术 SEO 审计工具包
+# seo-audit — 面向 DeepSeek Harness (DSH) 的 SEO 审计工具包
 
 [English](README.md) | [简体中文](README.zh.md)
 
@@ -8,7 +8,9 @@
 
 > **状态：** 生产可用 · **v1.0.0**
 
-一个生产级的 SEO 审计工具包，可对任意网站执行完整、加权的技术、内容、架构与本地审计 —— **完全自包含且严格本地运行**：无需 Claude Code、无需插件市场、无需第三方 SaaS、无需按域名付费。它在 DeepSeek Harness 环境中以普通 CLI + 代理库的形式运行，开箱即用。
+**面向 DeepSeek Harness (DSH) 的原生 SEO 审计工具包**，可对任意网站执行完整、加权的技术、内容、schema 与本地审计 —— **完全自包含且严格本地运行**：无需 Claude Code、无需插件市场、无需第三方 SaaS、无需按域名付费，**核心审计也无需 API Key**。它以普通 CLI + 代理库的形式在 DeepSeek Harness 环境中运行，开箱即用。
+
+与绑定 Claude Code 的 SEO 技能不同，seo-audit **原生属于 DSH**：直接在您已在使用的 Harness 中运行，数据不离开您的机器。
 
 专为 **本地 SEO**、**技术 SEO**、**schema.org**、**E-E-A-T**、**GEO / AI Overviews**、**Google Business Profile (GBP)**、**页内与内容** 审计而构建，适用于任何行业。
 
