@@ -31,7 +31,7 @@ self-contained port of the MIT toolkit
 see [Attribution & License](#attribution--license).
 
 <p align="center">
-  <img src="docs/assets/fanout.png" alt="seo-audit gated multi-agent fan-out" width="840">
+  <img src="docs/assets/fanout.svg" alt="seo-audit gated multi-agent fan-out" width="840">
 </p>
 
 ---
