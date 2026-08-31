@@ -32,8 +32,57 @@ see [Attribution & License](#attribution--license).
 
 ---
 
+## Quick answer
+
+**seo-audit is a free, local SEO audit toolkit for DeepSeek Harness (DSH).** You run
+one command (`./seo audit <url>`) and get a weighted, prioritised action plan covering
+technical SEO, on-page, schema/JSON-LD, E-E-A-T, GEO/AI Overviews, Local/GBP, backlinks,
+e-commerce, sitemap, image SEO, content briefs, keyword clustering, drift tracking and
+Google APIs (PSI/CrUX/GSC). It runs on your own machine — **no per-domain pricing, no
+SaaS, and no API key required for the core audit**. Measurement (53 Python scripts +
+`lib/`) is deterministic; judgment (24 sub-skills + 18 agents, e.g. E-E-A-T, GEO/AIO,
+GBP) is LLM-driven. Every recommendation carries the four claude-seo fields:
+**Observation → Dependency → Failure signal → Early indicator.**
+
+**Top use cases:** auditing a website's search visibility, technical SEO, schema markup,
+content/E-E-A-T, local SEO or Google Business Profile, GEO/AI-Overview readiness, Core
+Web Vitals, sitemap/hreflang, keyword clustering, content briefs and drift tracking.
+
+---
+
+## FAQ
+
+### Is seo-audit free?
+Yes. It's MIT-licensed and runs locally. The core audit needs **no API key, no account,
+no domain pricing** — only Python 3.10+, `requests`, `beautifulsoup4`, `lxml` and
+Playwright (installed by `./setup.sh` into a workspace-local `pylibs/`).
+
+### Does it need Claude Code or a subscription?
+No. seo-audit is a self-contained port of claude-seo and runs standalone. It needs **no
+Claude Code, no plugin marketplace and no third-party SaaS**.
+
+### Does it work without a Google API key?
+The core audit works fully without any key. Google APIs (PageSpeed, CrUX, GSC, GA4),
+DataForSEO, Firecrawl, Ahrefs, Bing and Banana are ported but only activate once you
+supply their own credentials — otherwise they degrade gracefully.
+
+### How does it differ from claude-seo?
+It's a native, self-contained port of claude-seo v2.2.5 (MIT-compatible), with the same
+weighted score (Technical 22% · Content 23% · On-Page 20% · Schema 10% · Performance
+10% · AI-Readiness 10% · Images 5%) and the same gated multi-agent fan-out, but it runs
+entirely in your own environment.
+
+### What are the four claude-seo fields?
+Every recommendation ships with **Observation → Dependency → Failure signal → Early
+indicator**: field 2 sets the execution order, field 3 tells you how you'd know it
+worked, field 4 is the leading signal to watch.
+
+---
+
 ## Table of Contents
 
+- [Quick answer](#quick-answer)
+- [FAQ](#faq)
 - [What it does](#what-it-does)
 - [Example output](#example-output)
 - [How it compares](#how-it-compares)
